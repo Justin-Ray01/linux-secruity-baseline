@@ -1,22 +1,18 @@
 # linux-security-baseline
 
-A lightweight **C++17** command-line tool that audits a Linux system’s basic security posture and prints a human-readable report.
+A lightweight **C++17** command-line tool that audits a Linux system’s basic security posture and prints a clean, human-readable report.
 
-This project complements `cpp-log-analyzer` by focusing on **prevention/hardening** instead of detection.
-
----
-
-## Checks (Phase 1)
-- World-writable file scan (common misconfiguration risk)
-- (Coming next) SSH hardening checks (`sshd_config`)
-- (Coming next) Password policy checks (`login.defs`)
-- (Coming next) Basic service/process inspection
+This project complements my `cpp-log-analyzer` repo by focusing on **prevention/hardening** rather than detection.
 
 ---
 
-## Build & Run
+## What it checks
 
-### Linux (g++)
-```bash
-g++ -std=c++17 -O2 -Wall -Wextra -o baseline src/main.cpp
-./baseline
+- **World-writable paths** (misconfiguration risk)
+- **SSH hardening signals** from `/etc/ssh/sshd_config` (when available)
+- **Password policy signals** from `/etc/login.defs`
+
+The tool is designed to run safely in restricted environments (school VMs/lab images) without requiring root.
+
+---
+
