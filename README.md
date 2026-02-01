@@ -16,3 +16,8 @@ The tool is designed to run safely in restricted environments (school VMs/lab im
 
 ---
 
+##Eample Output
+
+<img width="977" height="561" alt="linux-security-baseline2" src="https://github.com/user-attachments/assets/2fd63928-693b-4e5e-a14b-c308c0545efc" />
+
+
